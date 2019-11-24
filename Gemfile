@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1'
@@ -49,6 +50,7 @@ group :development, :test do
   gem "database_cleaner"
   gem "rspec-rails"
   gem "rack_session_access"
+  
 end
 
 group :development do
@@ -58,6 +60,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  
 end
 
 
