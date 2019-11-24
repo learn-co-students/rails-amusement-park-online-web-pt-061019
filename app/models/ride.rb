@@ -13,9 +13,11 @@ class Ride < ActiveRecord::Base
     elsif attraction.min_height > user.height
         "Sorry. You are not tall enough to ride the #{attraction.name}."
     else
-        binding.pry
-        user.tickets - attraction.tickets
-  
+        # binding.pry
+        c_tickets = user.tickets - attraction.tickets
+        c_nausea = user.nausea + attraction.nausea_rating
+        c_happiness = user.happiness + attraction.happiness_rating
+        user.update(tickets: c_tickets, nausea: c_nausea, happiness: c_happiness)
     end
   end
 end
