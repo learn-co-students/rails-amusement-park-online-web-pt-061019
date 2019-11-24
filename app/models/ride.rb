@@ -21,8 +21,3 @@ class Ride < ActiveRecord::Base
     end
   end
 end
-
-
-      # binding.pry
-    #   user.update(tickets: user.tickets - attraction.tickets, nausea: user.nausea + attraction.nausea_rating, happiness: user.happiness + attraction.happiness_rating)
-    #   "Thanks for riding the #{attraction.name}."
