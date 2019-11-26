@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   resources :users
   resources :attractions
+  resources :rides
 
   get '/signin', to: 'sessions#signin'
   post '/signin', to: 'sessions#create'
+
+  get '/logout', to: 'sessions#destroy'
 
 end
