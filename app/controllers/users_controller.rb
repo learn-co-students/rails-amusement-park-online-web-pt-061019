@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id])
+    if session[:user_id] != nil
+      @user = User.find_by_id(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -16,10 +20,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+
+    redirect_to user_path(params[:id])
+  end
+
   def mood
   end
 
   def first_ride
+  end
+
+  def destroy
+    session[:user_id].delete
   end
 
   private

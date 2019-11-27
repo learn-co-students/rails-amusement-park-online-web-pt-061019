@@ -1,0 +1,10 @@
+<%= form_for @user, url:"/sessions", method: :post do |f| %>
+  <%= f.label :user_name %>
+  <%= collection_select(:user, :name, User.all, :name, :name, prompt: "Please select your username from this dropdown") %><br><br>
+
+  <%# <%= f.collection_select(:id, @users, :id, :name, html_options = {name: :user_name}) %> %>
+
+  <%= f.label :password %><br>
+  <%= f.text_field :password %>
+  <%= f.submit "Submit" %>
+<% end %>

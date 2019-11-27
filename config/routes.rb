@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :users
   resources :rides
   resources :attractions
+  resources :sessions
 
   get '/users/new', to: 'users#new', as: 'root'
-  get '/signin', to: 'users#new'
+  get '/signin', to: 'sessions#new'
+  post '/users/:id', to: 'users#update'
 end
