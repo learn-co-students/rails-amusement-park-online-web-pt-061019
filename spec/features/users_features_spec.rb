@@ -143,21 +143,21 @@ describe 'Feature Test: Go on a Ride', :type => :feature do
   before :each do
     @rollercoaster = Attraction.create(
       :name => "Roller Coaster",
-      :tickets => 5,
+      :ticket_number => 5,
       :nausea_rating => 2,
       :happiness_rating => 4,
       :min_height => 32
     )
     @ferriswheel = Attraction.create(
       :name => "Ferris Wheel",
-      :tickets => 2,
+      :ticket_number => 2,
       :nausea_rating => 2,
       :happiness_rating => 1,
       :min_height => 28
     )
     @teacups = Attraction.create(
       :name => "Teacups",
-      :tickets => 1,
+      :ticket_number => 1,
       :nausea_rating => 5,
       :happiness_rating => 1,
       :min_height => 28
@@ -281,21 +281,21 @@ describe 'Feature Test: Admin Flow', :type => :feature do
   before :each do
     @rollercoaster = Attraction.create(
       :name => "Roller Coaster",
-      :tickets => 5,
+      :ticket_number => 5,
       :nausea_rating => 2,
       :happiness_rating => 4,
       :min_height => 32
     )
     @ferriswheel = Attraction.create(
       :name => "Ferris Wheel",
-      :tickets => 2,
+      :ticket_number => 2,
       :nausea_rating => 2,
       :happiness_rating => 1,
       :min_height => 28
     )
     @teacups = Attraction.create(
       :name => "Teacups",
-      :tickets => 1,
+      :ticket_number => 1,
       :nausea_rating => 5,
       :happiness_rating => 1,
       :min_height => 28
@@ -332,7 +332,7 @@ describe 'Feature Test: Admin Flow', :type => :feature do
     fill_in("attraction[min_height]", :with => "32")
     fill_in("attraction[happiness_rating]", :with => "2")
     fill_in("attraction[nausea_rating]", :with => "1")
-    fill_in("attraction[tickets]", :with => "4")
+    fill_in("attraction[ticket_number]", :with => "4")
     click_button('Create Attraction')
     expect(current_path).to eq("/attractions/4")
     expect(page).to have_content("Haunted Mansion")
