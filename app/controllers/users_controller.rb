@@ -5,7 +5,13 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_params)
-        redirect_to "/users/#{@user.id}"
+        if @user 
+            # binding.pry
+            session[:user_id] = @user.id
+            redirect_to "/users/#{@user.id}"
+        else
+            redirect_to "/"
+        end
     end
 
     def show
