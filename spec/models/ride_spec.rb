@@ -16,6 +16,7 @@ RSpec.describe Ride, :type => :model do
       :name => "Mindy",
       :password => "password",
       :nausea => 5,
+     
       :happiness => 3,
       :tickets => 4,
       :height => 34
