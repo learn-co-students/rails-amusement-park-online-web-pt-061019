@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :attractions
   resources :sessions
 
-  get '/users/new', to: 'users#new', as: 'root'
+  # get '/', to: 'static#home', as: 'root'
+  root 'static#home'
+
+  get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
-  post '/users/:id', to: 'users#update'
+  # post '/users/:id', to: 'users#update'
 end
