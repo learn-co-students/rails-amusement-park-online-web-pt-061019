@@ -1,9 +1,13 @@
+
+<%if @user.admin%>
+    ADMIN
+<%end%>
 Name: <%=@user.name%> <br>
 Nausea: <%=@user.nausea%> <br>
 Happiness: <%=@user.happiness%><br>
 Tickets: <%=@user.tickets%><br>
 Height: <%=@user.height%><br>
 Mood: <%=@user.mood%><br>
-<%if admin = true%>
-    ADMIN
-<%end%>
+
+<%=link_to 'Log Out', logout_path %>
+<%=link_to 'See attractions', attractions_path%>
