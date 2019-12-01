@@ -5,8 +5,6 @@ class Ride < ActiveRecord::Base
   validates :user_id, presence: true
   validates :attraction_id, presence: true
 
-  # validates :attraction_id, uniqueness: true
-
   def take_ride
     user = User.find_by_id(self.user_id)
     attraction = Attraction.find_by_id(self.attraction_id)
@@ -25,8 +23,6 @@ class Ride < ActiveRecord::Base
       else
         "Sorry. You are not tall enough to ride the #{attraction.name}."
       end
-    # elsif user.tickets >= attraction.tickets && user.height >= attraction.min_height
-    #   "Sorry. You do not have enough tickets to ride the #{attraction.name}. You are not tall enough to ride the #{attraction.name}."
     else
       if user.height >= attraction.min_height
         "Sorry. You do not have enough tickets to ride the #{attraction.name}."
