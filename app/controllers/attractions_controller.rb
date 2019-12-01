@@ -23,9 +23,6 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find_by_id(params[:id])
     @user = User.find_by_id(session[:user_id])
     @ride = Ride.new
-
-    # after click
-    # run take_ride
   end
 
   def edit
