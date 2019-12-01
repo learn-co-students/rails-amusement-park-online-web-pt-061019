@@ -6,11 +6,11 @@ class User < ActiveRecord::Base
   # validates :password, presence: true
   # validates :email, confirmation: true
   def mood
-    if self.happiness > self.nausea
-      "happy"
-    else
-      "sad"
-    end
-    # self.happiness > self.nausea ? "happy" : "sad"
+    # if self.happiness > self.nausea
+    #   "happy"
+    # else
+    #   "sad"
+    # end
+    (self.happiness > self.nausea) ? "happy" : "sad"
   end
 end
