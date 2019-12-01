@@ -9,8 +9,8 @@ class RidesController < ApplicationController
     # raise params.inspect
     @user = User.find_by_id(params[:ride][:user_id])
     @ride = Ride.create(attraction_id: params[:ride][:attraction_id], user_id: params[:ride][:user_id])
-    @ride.take_ride
-    redirect_to user_path(@user)
+    message = @ride.take_ride
+    redirect_to user_path(@user), flash: { message: message }
   end
 
   def take_ride

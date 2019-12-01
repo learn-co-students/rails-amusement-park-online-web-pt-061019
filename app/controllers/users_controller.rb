@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def new
     @user = User.new
   end
@@ -37,9 +38,7 @@ class UsersController < ApplicationController
   def first_ride
   end
 
-  def destroy
-    session[:user_id].delete
-  end
+
 
   private
 
