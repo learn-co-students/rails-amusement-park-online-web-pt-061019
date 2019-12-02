@@ -10,4 +10,8 @@ Nausea Rating: <%= @attraction.nausea_rating %><br>
 
 Happiness Rating: <%= @attraction.happiness_rating %><br>
 
-<%= button_to "Go on this ride", go_on_path, method: :post, params: {user_id: @user.id, attraction_id: @attraction.id} %>
+<% if !@user.admin %>
+    <%= button_to "Go on this ride", go_on_path, method: :post, params: {user_id: @user.id, attraction_id: @attraction.id} %>
+<% else %>
+    <%= link_to "Edit Attraction", edit_attraction_path %>
+<% end %>
