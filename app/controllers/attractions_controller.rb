@@ -5,7 +5,9 @@ class AttractionsController < ApplicationController
     end
 
     def show
-        @attraction =Attraction.find_by(params[:name])
+        @attraction = Attraction.find_by(params[:name])
+        @ride = @attraction.rides.build(user_id: current_user.id)
+        # binding.pry
     end
 
     def new
