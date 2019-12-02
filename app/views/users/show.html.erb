@@ -8,6 +8,9 @@ Happiness: <%=@user.happiness%><br>
 Tickets: <%=@user.tickets%><br>
 Height: <%=@user.height%><br>
 Mood: <%=@user.mood%><br>
+<%if @ride_taker%>
+    <%=@ride_taker%>
+<%end%>
 
 <%=link_to 'Log Out', logout_path %>
 <%=link_to 'See attractions', attractions_path%>

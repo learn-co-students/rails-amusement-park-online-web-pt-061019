@@ -16,7 +16,10 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
-    # binding.pry
+        if params[:ride_taker]
+            @ride_taker = params[:ride_taker]
+        end
+
         if session[:user_id] != @user.id
             redirect_to "/"
         end
