@@ -21,11 +21,6 @@ ActiveRecord::Schema.define(version: 2019_11_25_023523) do
   end
 
   create_table "rides", force: :cascade do |t|
-    t.string "name"
-    t.integer "tickets"
-    t.integer "nausea_rating"
-    t.integer "happiness_rating"
-    t.integer "min_height"
     t.integer "user_id"
     t.integer "attraction_id"
   end

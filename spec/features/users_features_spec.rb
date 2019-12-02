@@ -131,7 +131,7 @@ describe 'Feature Test: User Signout', :type => :feature do
 
   it "successfully destroys session hash when 'Log Out' is clicked as admin" do
     visit '/users/new'
-    # admin_signup method is defined in login_helper.rb
+    # admin_signup method is defined in 
     admin_signup
     click_link("Log Out")
     expect(page.get_rack_session).to_not include("user_id")

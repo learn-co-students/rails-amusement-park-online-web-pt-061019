@@ -1,5 +1,12 @@
+<%= link_to "Log Out", "/logout" %><br>
+<br><br>
+
+<% if @user.admin == true %>
+    ADMIN
+<% end %>
+<br>
 Name: <%= @user.name %><br>
 Tickets: <%= @user.tickets %><br>
 Mood: <%= @user.mood %><br>
 Height: <%= @user.height %> inches <br>
-<%= link_to "See attractions" %>
+<%= link_to "See attractions", "/attractions" %>
