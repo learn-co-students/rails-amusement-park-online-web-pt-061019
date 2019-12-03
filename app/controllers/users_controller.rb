@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-    # def index
-    # end
-
     def new
         @user = User.new
     end
@@ -21,7 +18,7 @@ class UsersController < ApplicationController
         if session.include? :user_id 
             @user = User.find(params[:id])
         else
-            redirect_to "/"
+            redirect_to root_path
         end
     end
 
