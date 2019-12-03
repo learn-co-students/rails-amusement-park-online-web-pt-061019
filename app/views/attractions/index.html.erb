@@ -1,15 +1,13 @@
+<ul>
 <%@attractions.each do |attraction|%>
 
     <%if @user.admin%>
-    
-    <ul>
     <li><%= link_to "Show #{attraction.name}", attraction_path(attraction)%></li>
-    </ul>
-    <%=link_to "New Attraction", new_attraction_path%>
     
     <%else%>
-    <ul>
     <li><%= link_to "Go on #{attraction.name}", attraction_path(attraction)%></li>
-    </ul>
     <%end%>
+    
 <%end%>
+</ul>
+<%=link_to "New Attraction", new_attraction_path%>
