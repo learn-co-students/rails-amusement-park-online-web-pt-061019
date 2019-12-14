@@ -23,14 +23,14 @@ class AttractionsController < ApplicationController
     end 
 
     def edit
-        @attaction = Attraction.find(params[:id])
+        @attraction = Attraction.find(params[:id])
     end 
 
     def update 
         @attraction = Attraction.find(params[:id])
         @attraction.update(attraction_params)
         if @attraction.save
-            redirect_to attraction_oath(@attraction)
+            redirect_to attraction_path(@attraction)
         else
             render :edit
         end 
