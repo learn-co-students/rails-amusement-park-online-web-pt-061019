@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :height, "Height (in inches)" %>
+    <%= f.text_field :height %>
+
+    <%= f.label :happiness, "How happy are you? (1-5 scale)" %>
+    <%= f.text_field :happiess %>
+
+    <%= f.label :nausea, "How nauseous are you? (1-5 scale)" %>
+    <%= f.text_field :nausea %>
+
+    <%= f.label :tickets, "How many dollers are in your pocket?" %>
+    <%= f.text_field :tickets %>
+
+    <%= f.label :admin, "Check box if you are a theme parl owner" %>
+    <%= f.check_box :admin %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Create User" %>
+
+<% end %> 
