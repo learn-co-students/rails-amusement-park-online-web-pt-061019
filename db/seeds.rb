@@ -22,7 +22,7 @@ DATA = {
     ["Quvenzhané Wallis", 2, 2, 13, 30, "password"]
   ],
   :attraction_keys =>
-   ["name", "nausea_rating", "happiness_rating", "tickets", "min_height"],
+   ["name", "nausea_rating", "happiness_rating", "ticket_number", "min_height"],
   :attractions => [
     ["Scrambler Ride", 2, 2, 2, 36],
     ["Miniature Railroad", 0, 1, 2, 32],

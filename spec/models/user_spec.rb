@@ -27,7 +27,7 @@ RSpec.describe User, :type => :model do
   let(:roller_coaster) {
     Attraction.create(
       :name => "Roller Coaster",
-      :tickets => 5,
+      :ticket_number => 5,
       :nausea_rating => 2,
       :happiness_rating => 4,
       :min_height => 32
@@ -37,7 +37,7 @@ RSpec.describe User, :type => :model do
   let(:ferris_wheel) {
     Attraction.create(
       :name => "Ferris Wheel",
-      :tickets => 2,
+      :ticket_number => 2,
       :nausea_rating => 2,
       :happiness_rating => 1,
       :min_height => 28
